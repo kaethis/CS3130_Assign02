@@ -52,7 +52,9 @@ if __name__ == '__main__':
 
         filename = sys.argv[1]
 
-        if parser.parse(filename, '[A-Za-z\']+') == -1:
+        ex = '[A-Za-z]+\'*[A-Za-z]+|[A-Za-z]+'
+
+        if parser.parse(filename, ex) == -1:
 
             ui.exit();
 
